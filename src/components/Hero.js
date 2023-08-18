@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div className={styles.hero}>
       <img src={imgSrc} alt="logo"></img>
-      <h2 class={styles.text}>Chez vous, partout et ailleurs</h2>
+      <h2 className={styles.text}>Chez vous, partout et ailleurs</h2>
     </div>
   );
 }

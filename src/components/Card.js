@@ -1,10 +1,14 @@
 import React from 'react';
 import styles from '../styles/Card.module.css';
 
-function Card({ title }) {
-    return <div className={styles.card}>
-            <p className={styles.title}>{title}</p>
-           </div>;
+function Card({ title, image }) {
+    
+    return (
+            <div className={styles.card}>
+                <img className={styles.image} src={image} alt="image" />
+                <p className={styles.title}>{title}</p>
+            </div>
+    )
 }
 
 export default Card;

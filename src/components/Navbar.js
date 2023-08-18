@@ -5,13 +5,13 @@ import logoSrc from '../assets/LOGO.jpg';
 
 function Navbar() {
     return (
-        <div class={styles.navbar}>
-            <div class={styles.logo}>
+        <div className={styles.navbar}>
+            <div className={styles.logo}>
                 <img src={logoSrc} alt="Logo" />
             </div>
-            <div class={styles.links}>
-                <a href="#" class={styles.link}>Accueil</a>
-                <a href="#" class={styles.link}>A propos</a>
+            <div className={styles.links}>
+                <a href="#" className={styles.link}>Accueil</a>
+                <a href="#" className={styles.link}>A propos</a>
             </div>
         </div>
     )
