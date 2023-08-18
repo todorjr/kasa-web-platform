@@ -12,7 +12,7 @@ function Header() {
     <Hero />
     <div className={styles.container}>
     {data.map(card => (
-      <Card key={card.id} image={card.image} title={card.title} />
+      <Card key={card.id} image={card.pictures[0]} title={card.title} />
     ))}
   </div>
   </>
