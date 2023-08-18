@@ -1,0 +1,25 @@
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 30px;
+    width: 340px;
+    height: 340px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    background-color: #FF6060;
+  }
+  
+  .title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67px;
+    color: #FFF;
+  }
+  
