@@ -9,9 +9,8 @@ function Gallery() {
   return (
     <div className={styles.container}>
       {data.map(card => (
-        <Card key={card.id} images={card.pictures} title={card.title} id={card.id} />
+        <Card key={card.id} images={card.pictures} title={card.title} id={card.id}/>
       ))}
-
     </div>
   );
   
