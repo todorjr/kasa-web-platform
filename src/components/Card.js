@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Card.module.css';
 
-function Card({ title, image }) {
-    
-    return (
-            <div className={styles.card}>
-                <img className={styles.image} src={image} alt="image" />
-                <p className={styles.title}>{title}</p>
-            </div>
-    )
-}
+function Card({ title, images }) {
+    const [currentIndex, setCurrentIndex] = useState(0); //currentIndex is the state variable and setCurrentIndex is the function that updates the state variable
 
+    const handlePrevClick = () => {
+        setCurrentIndex(prevIndex => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    };
+
+    const handleNextClick = () => {
+        setCurrentIndex(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    };
+
+    return (
+        <div className={styles.card}>
+            <div className={styles.controls}>
+            <p className={styles.arrow} onClick={handlePrevClick}>←</p>
+            <p className={styles.arrow} onClick={handleNextClick}>→</p>
+            </div>
+            <img className={styles.image} src={images[currentIndex]} alt={`Image ${currentIndex}`} />
+            <p className={styles.title}>{title}</p>
+        </div>
+    );
+}
 export default Card;

@@ -10,6 +10,8 @@
     border-radius: 10px;
     position: relative;
     background-color: #FF6060;
+    text-align: left;
+    text-indent: 0;
   }
   
   .title {
@@ -21,6 +23,8 @@
     font-size: 18px;
     line-height: 25.67px;
     color: #FFF;
+    padding-left: 10px;
+    z-index: 2;
   }
 
   .image {
@@ -28,5 +32,21 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    position: relative;
+    top: -52px;
+    z-index: 1;
   }
+  
+  .controls {
+    position: relative;
+    top: 110px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2;
+    cursor: pointer;
+    color: #fff;
+  }
+  
   
