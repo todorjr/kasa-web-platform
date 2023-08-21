@@ -21,7 +21,7 @@ function Card({ title, images, id }) {
             { images.length > 1 && <p className={styles.arrow} onClick={ handleNextClick }>→</p> }
             </div>
             <img className={styles.image} src={images[currentIndex]} alt={images.id} />
-            <Link to={`${id}`}>
+            <Link to={`/${id}`}>
                 <p className={styles.title}>{title}</p>
             </Link>
         </div>

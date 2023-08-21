@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './components/Home';
 import About from './components/About';
+import Details from './components/Details';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -12,6 +13,7 @@ root.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/:id" element={<Details />} />
         </Routes>
       </Router>
   </React.StrictMode>
