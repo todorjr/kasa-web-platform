@@ -1,0 +1,27 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+    padding-left: 0;
+}
+.image {
+    width: 1240px;
+    height: 415px;
+    margin-left: 300px;
+}
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+    z-index: 2;
+}

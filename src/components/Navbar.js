@@ -8,7 +8,7 @@ function Navbar() {
     return (
         <div className={styles.navbar}>
             <div className={styles.logo}>
-                <img src={logoSrc} alt="Logo" />
+                <Link to='/'><img src={logoSrc} alt="Logo" /></Link>
             </div>
             <div className={styles.links}>
                 <Link to="/" className={styles.link}>Accueil</Link>
