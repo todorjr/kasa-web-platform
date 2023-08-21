@@ -1,4 +1,5 @@
-.card {
+
+  .card {
     border: 1px solid #ddd;
     padding: 10px;
     margin: 30px;
@@ -11,7 +12,6 @@
     position: relative;
     background-color: #FF6060;
     text-align: left;
-    text-indent: 0;
   }
   
   .title {
@@ -27,24 +27,40 @@
     z-index: 2;
   }
 
+  .image-container {
+    /* Create a container for the image to control its position */
+    position: relative;
+    height: 70%; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
   .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    position: relative;
-    top: -52px;
-    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
   
   .controls {
-    position: relative;
-    top: 110px;
+    position: absolute;
+    bottom: 150px;
     padding: 0 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 2;
+    align-items: center;
     cursor: pointer;
     color: #fff;
+    z-index: 2;
+  }
+  .controls p:first-child {
+      margin-right: auto; 
+  }
+
+  .controls p:last-child {
+      margin-left: 270px;
   }

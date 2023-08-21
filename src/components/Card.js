@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styles from '../styles/Card.module.css';
+import { Link } from 'react-router-dom';
 
-function Card({ title, images }) {
+
+function Card({ title, images, id }) {
     const [currentIndex, setCurrentIndex] = useState(0); //currentIndex is the state variable and setCurrentIndex is the function that updates the state variable
 
     const handlePrevClick = () => {
@@ -15,11 +17,13 @@ function Card({ title, images }) {
     return (
         <div className={styles.card}>
             <div className={styles.controls}>
-            <p className={styles.arrow} onClick={handlePrevClick}>←</p>
-            <p className={styles.arrow} onClick={handleNextClick}>→</p>
+            { images.length > 1 && <p className={styles.arrow} onClick={ handlePrevClick }>←</p> }
+            { images.length > 1 && <p className={styles.arrow} onClick={ handleNextClick }>→</p> }
             </div>
-            <img className={styles.image} src={images[currentIndex]} alt={`Image ${currentIndex}`} />
-            <p className={styles.title}>{title}</p>
+            <img className={styles.image} src={images[currentIndex]} alt={images.id} />
+            <Link to={`${id}`}>
+                <p className={styles.title}>{title}</p>
+            </Link>
         </div>
     );
 }
