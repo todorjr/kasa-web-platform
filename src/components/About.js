@@ -1,16 +1,14 @@
 // About.js
 import React from 'react';
 import Navbar from './Navbar';
+import Banner from './Banner';
 import Footer from './Footer';
 
 const About = () => {
   return (
     <>
     <Navbar />
-    <div>
-      <h2>About Us</h2>
-      <p>This is the about page content.</p>
-    </div>
+    <Banner />
     <Footer />
     </>
   );
