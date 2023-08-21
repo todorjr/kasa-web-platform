@@ -6,15 +6,12 @@
     width: 1400px;
     margin-left: 130px;
   }
-  
   .logo img {
     width: 150px;
   }
-  
   .links {
     display: flex;
   }
-  
   .link {
     color: #FF6060;
     text-decoration: none;
@@ -25,7 +22,6 @@
     line-height: 34px;
     letter-spacing: 0em;
     text-align: right;
-
   }
   .link:hover {
     text-decoration: underline;

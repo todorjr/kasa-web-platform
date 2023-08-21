@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Banner from './Banner';
+import Dropdown from './Dropdown';
 import Footer from './Footer';
 
 const About = () => {
@@ -9,6 +10,7 @@ const About = () => {
     <>
     <Navbar />
     <Banner />
+    <Dropdown />
     <Footer />
     </>
   );
