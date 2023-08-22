@@ -1,6 +1,5 @@
 
   .card {
-    border: 1px solid #ddd;
     padding: 10px;
     margin: 30px;
     width: 340px;
@@ -10,7 +9,6 @@
     box-sizing: border-box;
     border-radius: 10px;
     position: relative;
-    background-color: #FF6060;
     text-align: left;
   }
   
@@ -43,6 +41,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    border-radius: 10px;
   }
   
   .controls {

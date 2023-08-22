@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../data/data.json';
 import Navbar from './Navbar';
+import Collaps from './Collaps';
 import Footer from './Footer';
 import styles from '../styles/Details.module.css';
 
@@ -18,24 +19,42 @@ function Details() {
         setCurrentIndex(prevIndex => (prevIndex === selectedData.pictures.length - 1 ? 0 : prevIndex + 1));
     };
 
+    const averageRating = Math.round(selectedData.rating);
+    const starIcons = Array.from({ length: 5 }, (_, index) => ( //new array with 5 elements
+      <span key={index} className={styles.starRating}>
+        {index < averageRating ? '★' : '☆'}
+      </span>
+    ));
+
     return (
         <>
             <Navbar />
-            <div>
+            <div className={styles.centeredContainer}>
                 <div className={styles.carousel}>
-                { selectedData.pictures.length > 1 && <p className={styles.arrows} onClick={ handlePrevClick }>←</p> }
-                { selectedData.pictures.length > 1 && <p className={styles.arrows} onClick={ handleNextClick }>→</p> }
+                { selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.left}`} onClick={ handlePrevClick }>←</p> }
                 <img src={selectedData.pictures[currentIndex]} alt={selectedData.id} className={styles.image} />
+                { selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.right}`} onClick={ handleNextClick }>→</p> }
                 </div>
-                <h1>{selectedData.title}</h1>
-                <p>{selectedData.description}</p>
-                <p>{selectedData.location}</p>
-                <ul className={styles.list}>
-                    {selectedData.tags.map(tag => (
-                        <li key={tag}>{tag}</li>
-                    ))}
-                </ul>
+                <div className={styles.container}>
+                    <div className={styles.informations}>
+                        <h1>{selectedData.title}</h1>
+                        <p>{selectedData.location}</p>
+                        <ul className={styles.list}>
+                            {selectedData.tags.map(tag => (
+                                <li className={styles.tag} key={tag}>{tag}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={styles.description}>
+                        <div className={styles.host}>
+                            <h1>{selectedData.host.name}</h1>
+                            <img src={selectedData.host.picture} alt={selectedData.host.name} className={styles.hostPicture} />
+                        </div>
+                        <div className={styles.starRatingContainer}>{starIcons}</div>
+                    </div>
+                </div>
             </div>
+            <Collaps />
             <Footer />
         </>
     )

@@ -1,3 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1400px;
+    margin-left: 180px;
+}
+
+.host {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.host h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FF6060;
+}
+
+.hostPicture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
 .list {
     display: flex;
     flex-direction: row;
@@ -5,23 +34,73 @@
     gap: 10px;
     padding-left: 0;
 }
-.image {
-    width: 1240px;
-    height: 415px;
-    margin-left: 300px;
+.starRating {
+    display: inline-block;
+    font-size: 24px;
+    color: #FF6060;
+    margin-top: 10px;
+    padding: 0 5px;
 }
+
+.tag {
+    border-radius: 10px;
+    background-color: #FF6060;
+    color: #fff;
+    padding: 5px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 300;
+}
+
 .carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    display: inline-block;
+    margin-left: 180px;
+    margin-top: 40px;
 }
+
 .arrows {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 24px;
     cursor: pointer;
-    color: #000;
-    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* Ensure arrows appear above the image */
+}
+
+.arrows.left {
+    left: 10px;
+}
+
+.arrows.right {
+    right: 10px;
+}
+
+.image {
+    width: 1400px;
+    height: 415px;
+    display: block;
+    border-radius: 25px;
+}
+
+.informations h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 52px;
+    color: #FF6060;
+}
+
+.informations p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FF6060;
+}
+
+.description {
+    margin-top: 24px;
 }

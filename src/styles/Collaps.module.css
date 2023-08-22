@@ -1,0 +1,40 @@
+.container {
+    margin: 20px 180px;
+    display: flex;
+    justify-content: space-between;
+}
+.dropdown {
+    width: 582px;
+    height: auto;
+    margin: 50px auto 50px;
+    background-color: #FF6060;
+    border-radius: 5px;
+}
+.title {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.text { background: #F6F6F6}
+
+.text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FF6060;
+    padding: 10px;
+}
+.equipment {
+    list-style: none;
+    padding: 10px;
+    color: #FF6060;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+}
