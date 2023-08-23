@@ -1,7 +1,8 @@
 .banner {
-    height: 200px;
+    height: 223px;
     width: 1400px;
-    margin: 25px auto 20px;
+    margin: 85px auto 0;
+    overflow: hidden;
 }
 .banner img {
     width: 100%;
