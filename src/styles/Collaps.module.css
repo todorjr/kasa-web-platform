@@ -53,3 +53,36 @@
     margin-right: 10px;
     color: #fff;
 }
+
+/* Media query for tablets */
+@media (max-width: 1024px) {
+    .container {
+        width: 100%;
+        margin: 40px auto 0;
+        display: flex;
+        flex-direction: column;
+    }
+  
+    .dropdown {
+        width: 100%;
+    }
+  
+    .title {
+    }
+  
+    .text {
+    }
+  
+    .text span {
+    }
+  
+    .equipment {
+    }
+  
+    .titleInfo {
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+  }

@@ -70,3 +70,19 @@
   .controls p:last-child {
       margin-left: 270px;
   }
+
+
+  @media (max-width: 1024px) {
+    .card {
+      width: 400px; 
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+      margin: 40px auto 0;
+    }
+
+  }

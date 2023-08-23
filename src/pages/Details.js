@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../data/data.json';
-import Navbar from './Navbar';
-import Collaps from './Collaps';
-import Footer from './Footer';
+import Navbar from '../components/Navbar';
+import Collaps from '../components/Collaps';
+import Footer from '../components/Footer';
 import styles from '../styles/Details.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 
 function Details() {
     const { id } = useParams();
@@ -24,7 +25,7 @@ function Details() {
     const averageRating = Math.round(selectedData.rating);
     const starIcons = Array.from({ length: 5 }, (_, index) => ( //new array with 5 elements
       <span key={index} className={styles.starRating}>
-        {index < averageRating ? '★' : '☆'}
+        {index < averageRating ? <FontAwesomeIcon icon={faStar} /> : <FontAwesomeIcon icon={faStarRegular} />}
       </span>
     ));
 

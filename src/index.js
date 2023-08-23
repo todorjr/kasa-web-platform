@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './components/Home';
-import About from './components/About';
-import Details from './components/Details';
-import Error from './components/Error';
+import Home from './pages/Home';
+import About from './pages/About';
+import Details from './pages/Details';
+import Error from './pages/Error';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
