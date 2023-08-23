@@ -5,6 +5,8 @@ import Navbar from './Navbar';
 import Collaps from './Collaps';
 import Footer from './Footer';
 import styles from '../styles/Details.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 function Details() {
     const { id } = useParams();
@@ -31,9 +33,15 @@ function Details() {
             <Navbar />
             <div className={styles.centeredContainer}>
                 <div className={styles.carousel}>
-                { selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.left}`} onClick={ handlePrevClick }>←</p> }
+                { selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.left}`} onClick={ handlePrevClick }>
+                    {<FontAwesomeIcon className={styles.icon} icon={faChevronLeft}/>}
+                </p>
+                }
                 <img src={selectedData.pictures[currentIndex]} alt={selectedData.id} className={styles.image} />
-                { selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.right}`} onClick={ handleNextClick }>→</p> }
+                { selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.right}`} onClick={ handleNextClick }>
+                    {<FontAwesomeIcon className={styles.icon} icon={faChevronRight}/>}
+                </p>
+                }
                 </div>
                 <div className={styles.container}>
                     <div className={styles.informations}>

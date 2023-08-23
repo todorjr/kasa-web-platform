@@ -17,9 +17,12 @@
     font-weight: 500;
     font-size: 18px;
 }
-.text { background: #F6F6F6}
+.text {
+    background: #F6F6F6;
+    height: 250px;
+}
 
-.text p {
+.text span {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -27,7 +30,8 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FF6060;
-    padding: 10px;
+    padding:10px; 
+    display:inline-block;
 }
 .equipment {
     list-style: none;
@@ -36,5 +40,16 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 300;
-    line-height: 26px;
+    line-height: 10px;
+}
+.equipment:nth-child(1){margin-top: 10px}
+.titleInfo {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+}
+.icon {
+    margin-right: 10px;
+    color: #fff;
 }
