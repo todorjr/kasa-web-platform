@@ -4,6 +4,7 @@ import data from '../data/data.json';
 import Navbar from '../components/Navbar';
 import Collaps from '../components/Collaps';
 import Footer from '../components/Footer';
+import Error from '../pages/Error';
 import styles from '../styles/Details.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight, faStar } from '@fortawesome/free-solid-svg-icons'
@@ -11,8 +12,17 @@ import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 
 function Details() {
     const { id } = useParams();
-    const selectedData = data.find(item => item.id === id);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const validIds = data.map(item => item.id);    
+    if (!validIds.includes(id)) {
+        return (
+            <>
+                <Error />
+            </>
+        );
+    }
+    const selectedData = data.find(item => item.id === id);
 
     const handlePrevClick = () => {
         setCurrentIndex(prevIndex => (prevIndex === 0 ? selectedData.pictures.length - 1 : prevIndex - 1));
