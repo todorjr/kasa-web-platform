@@ -1,4 +1,3 @@
-
 .errorContainer {
     width: 100%;
     height: 100%;
@@ -8,10 +7,12 @@
     align-items: center;
     margin-top: 70px;
 }
+
 .error {
     width: 597px;
     height: 263px;
 }
+
 .errorContainer p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -20,6 +21,7 @@
     color: #FF6060;
     margin-top: 30px;
 }
+
 .errorContainer a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;

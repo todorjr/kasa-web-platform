@@ -33,12 +33,9 @@
     }
 
     .hero .text {
-        top: 150px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 36px;
-        line-height: 48px;
-        width: 80%;
+        top: 160px;
+        transform: translateX(-40%);
+        font-size: 34px;
     }
 }
 
@@ -47,5 +44,25 @@
     .hero {
         width: 100%;
         margin: 40px auto 0;
+    }
+
+    .hero .text {
+        transform: translateX(-55%)
+    }
+}
+
+@media (max-width: 425px) {
+    .hero .text {
+        transform: translateX(-80%);
+        font-size: 23px;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero .text {
+        left: 446px
     }
 }

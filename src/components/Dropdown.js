@@ -21,7 +21,7 @@ function Dropdown() {
             <div className={styles.dropdown} onClick={() => handleItemClick("Fiabilité")}>
                 <div className={styles.titleInfo}>
                 <p className={styles.title}>Fiabilité</p>
-                { isItemSelected("Fiabilité") ? <FontAwesomeIcon icon={faChevronDown} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronUp} className={styles.icon} />}{' '}
+                { isItemSelected("Fiabilité") ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
                 {isItemSelected("Fiabilité") && (
                     <div className={styles.text}>
@@ -32,7 +32,7 @@ function Dropdown() {
             <div className={styles.dropdown} onClick={() => handleItemClick("Respect")}>
             <div className={styles.titleInfo}>
                 <p className={styles.title}>Respect</p>
-                { isItemSelected("Respect") ? <FontAwesomeIcon icon={faChevronDown} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronUp} className={styles.icon} />}{' '}
+                { isItemSelected("Respect") ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
                 {isItemSelected("Respect") && (
                     <div className={styles.text}>
@@ -43,7 +43,7 @@ function Dropdown() {
             <div className={styles.dropdown} onClick={() => handleItemClick("Service")}>
             <div className={styles.titleInfo}>
                 <p className={styles.title}>Service</p>
-                { isItemSelected("Service") ? <FontAwesomeIcon icon={faChevronDown} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronUp} className={styles.icon} />}{' '}
+                { isItemSelected("Service") ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
                 {isItemSelected("Service") && (
                     <div className={styles.text}>
@@ -54,7 +54,7 @@ function Dropdown() {
             <div className={styles.dropdown} onClick={() => handleItemClick("Sécurité")}>
             <div className={styles.titleInfo}>
                 <p className={styles.title}>Sécurité</p>
-                { isItemSelected("Sécurité") ? <FontAwesomeIcon icon={faChevronDown} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronUp} className={styles.icon} />}{' '}
+                { isItemSelected("Sécurité") ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
                 {isItemSelected("Sécurité") && (
                     <div className={styles.text}>

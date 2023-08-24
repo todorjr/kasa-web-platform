@@ -29,7 +29,7 @@ function Collaps() {
                 <div className={styles.dropdown} onClick={handleDescriptionClick}>
                 <div className={styles.titleInfo}>
                     <p className={styles.title}>Description</p>
-                    { selectedDescription ? <FontAwesomeIcon icon={faChevronDown} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronUp} className={styles.icon} />}{' '}
+                    { selectedDescription ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
                 {selectedDescription && (
                         <div className={styles.text}>
@@ -42,8 +42,9 @@ function Collaps() {
                 <div className={styles.dropdown} onClick={handleEquipmentsClick}>
                 <div className={styles.titleInfo}>
                     <p className={styles.title}>Equipments</p>
-                    { selectedEquipments ? <FontAwesomeIcon icon={faChevronDown} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronUp} className={styles.icon} />}{' '}
-                </div>                    {selectedEquipments && (
+                    { selectedEquipments ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
+                </div>
+                {selectedEquipments && (
                         <div className={styles.text}>
                             {selectedData.equipments.map(equipment => (
                                 <li className={styles.equipment} key={equipment}>{equipment}</li>

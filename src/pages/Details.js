@@ -24,9 +24,9 @@ function Details() {
 
     const averageRating = Math.round(selectedData.rating);
     const starIcons = Array.from({ length: 5 }, (_, index) => ( //new array with 5 elements
-      <span key={index} className={styles.starRating}>
-        {index < averageRating ? <FontAwesomeIcon icon={faStar} /> : <FontAwesomeIcon icon={faStarRegular} />}
-      </span>
+        <span key={index} className={styles.starRating}>
+            {index < averageRating ? <FontAwesomeIcon icon={faStar} /> : <FontAwesomeIcon icon={faStarRegular} />}
+        </span>
     ));
 
     return (
@@ -34,15 +34,15 @@ function Details() {
             <Navbar />
             <div className={styles.centeredContainer}>
                 <div className={styles.carousel}>
-                { selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.left}`} onClick={ handlePrevClick }>
-                    {<FontAwesomeIcon className={styles.icon} icon={faChevronLeft}/>}
-                </p>
-                }
-                <img src={selectedData.pictures[currentIndex]} alt={selectedData.id} className={styles.image} />
-                { selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.right}`} onClick={ handleNextClick }>
-                    {<FontAwesomeIcon className={styles.icon} icon={faChevronRight}/>}
-                </p>
-                }
+                    {selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.left}`} onClick={handlePrevClick}>
+                        {<FontAwesomeIcon className={styles.icon} icon={faChevronLeft} />}
+                    </p>
+                    }
+                    <img src={selectedData.pictures[currentIndex]} alt={selectedData.id} className={styles.image} />
+                    {selectedData.pictures.length > 1 && <p className={`${styles.arrows} ${styles.right}`} onClick={handleNextClick}>
+                        {<FontAwesomeIcon className={styles.icon} icon={faChevronRight} />}
+                    </p>
+                    }
                 </div>
                 <div className={styles.container}>
                     <div className={styles.informations}>

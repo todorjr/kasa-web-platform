@@ -6,22 +6,20 @@ import Error from '../pages/Error';
 import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />,
-  },
-  {
-    path: '/about',
-    element: <About />,
-  },
-  {
-    path: '/:id',
-    element: <Details />,
-  },
-  {
-    path: '*',
-    element: <Error />,
-  },
+    {
+        path: '/',
+        element: <Home />,
+    },
+    {
+        path: '/about',
+        element: <About />,
+    },
+    {
+        path: '/:id',
+        element: <Details />,
+    },
+    {
+        path: '*',
+        element: <Error />,
+    },
 ]);
-
-

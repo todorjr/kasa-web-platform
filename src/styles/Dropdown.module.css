@@ -1,4 +1,7 @@
-.container {margin: 20px}
+.container {
+    margin: 20px
+}
+
 .dropdown {
     width: 750px;
     height: auto;
@@ -6,6 +9,7 @@
     background-color: #FF6060;
     border-radius: 5px;
 }
+
 .title {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -13,7 +17,10 @@
     font-weight: 500;
     font-size: 18px;
 }
-.text { background: #F6F6F6}
+
+.text {
+    background: #F6F6F6
+}
 
 .text span {
     font-family: 'Montserrat', sans-serif;
@@ -26,13 +33,44 @@
     padding: 20px 20px 20px 10px;
     display: inline-block;
 }
+
 .titleInfo {
     display: flex;
     justify-content: space-between;
     height: 40px;
     align-items: center;
 }
+
 .icon {
     margin-right: 10px;
     color: #fff;
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: 100%;
+        margin: 40px auto 0;
+    }
+
+    .dropdown {
+        width: auto;
+        margin: 20px auto 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: auto
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: auto
+    }
+
+    .dropdown {
+        width: auto;
+        margin: 20px auto 30px;
+    }
 }
