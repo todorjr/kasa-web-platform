@@ -12,7 +12,7 @@ import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 
 function Details() {
     const { id } = useParams();
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0); //currentIndex of the picture setCurrentIndex is a function to update currentIndex
 
     const validIds = data.map(item => item.id);    
     if (!validIds.includes(id)) {
