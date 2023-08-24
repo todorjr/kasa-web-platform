@@ -60,9 +60,9 @@
         word-break: break-word;
     }
 }
-
+/* 
 @media (min-width: 1440px) {
     .hero .text {
         left: 446px
     }
-}
+} */
