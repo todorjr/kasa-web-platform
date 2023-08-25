@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 70px;
+    text-align: center;
 }
 
 .error {
@@ -29,4 +30,30 @@
     line-height: 26px;
     color: #FF6060;
     margin-top: 20px;
+}
+
+@media (max-width: 425px) {
+    .errorContainer {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .error {
+        width: 100%; 
+        height: auto;
+        max-width: 280px; 
+        max-height: 123px; 
+    }
+
+    .errorContainer p {
+        font-size: 24px; 
+        line-height: 36px; 
+        margin-top: 20px; 
+    }
+
+    .errorContainer a {
+        font-size: 16px; 
+        line-height: 24px; 
+        margin-top: 15px; 
+    }
 }

@@ -5,14 +5,12 @@
     width: 1400px;
     margin-left: 160px;
 }
-
 .host {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-left: 50px;
 }
-
 .host h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -20,14 +18,12 @@
     line-height: 26px;
     color: #FF6060;
 }
-
 .hostPicture {
     width: 64px;
     height: 64px;
     border-radius: 50%;
     margin-top: 10px;
 }
-
 .list {
     display: flex;
     flex-direction: row;
@@ -35,7 +31,6 @@
     gap: 10px;
     padding-left: 0;
 }
-
 .starRating {
     display: inline-block;
     font-size: 24px;
@@ -43,7 +38,6 @@
     margin-top: 10px;
     padding: 0 5px;
 }
-
 .tag {
     border-radius: 10px;
     background-color: #FF6060;
@@ -56,19 +50,16 @@
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
         box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .tag:hover {
     transform: translateY(-5px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 .carousel {
     position: relative;
     display: inline-block;
     margin-left: 160px;
     margin-top: 40px;
 }
-
 .arrows {
     font-size: 24px;
     cursor: pointer;
@@ -77,27 +68,18 @@
     transform: translateY(-50%);
     z-index: 1;
 }
-
-.arrows.left {
-    left: 10px;
-}
-
-.arrows.right {
-    right: 10px;
-}
-
+.arrows.left { left: 10px }
+.arrows.right { right: 10px }
 .icon {
     color: #fff;
     font-size: 36px;
 }
-
 .image {
     width: 1400px;
     height: 415px;
     display: block;
     border-radius: 25px;
 }
-
 .informations h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -105,21 +87,18 @@
     line-height: 20px;
     color: #FF6060;
 }
-
 .informations p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 18px;
     color: #FF6060;
 }
-
 .description {
     margin-top: 24px;
     display: flex;
     flex-direction: column;
     align-items: self-end;
 }
-
 @media (max-width: 1024px) {
     .container {
         flex-direction: row;
@@ -127,31 +106,41 @@
         margin-left: 0;
         align-items: baseline;
     }
-
     .carousel {
         width: 100%;
         margin: 40px auto 0;
     }
-
     .image {
         width: 100%;
         object-fit: cover;
     }
-
     .host {
         flex-direction: row;
         align-items: center;
         margin-left: 0;
         margin-top: 20px;
     }
-
     .list {
         flex-direction: row;
         gap: 5px;
         padding-left: 0;
     }
 }
-
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        width: 100%;
+        margin-left: 0;
+        align-items: baseline;
+    }
+    .carousel {
+        width: 100%;
+        margin: 40px auto 0;
+    }
+    .image {
+        width: 100%;
+        object-fit: cover;
+    }
+}
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -159,27 +148,20 @@
         margin-left: 0;
         align-items: baseline;
     }
-
-    .host {
-        margin-top: 10px;
-        /* Adjust as needed */
-    }
+    .host { margin-top: 10px }
 
     .informations h1 {
         margin-top: 20px;
         font-size: 20px;
     }
-
     .carousel {
         width: 100%;
         margin: 40px auto 0;
     }
-
     .image {
         width: 100%;
         object-fit: cover;
     }
-
     .description {
         display: flex;
         flex-direction: row-reverse;
@@ -190,31 +172,16 @@
 }
 
 @media (max-width: 425px) {
-    .description {
-        margin-top: 0
-    }
-
-    .carousel {
-        margin: 0 !important
-    }
-
-    .informations {
-        padding-right: 30px
-    }
-
+    .description { margin-top: 0 }
+    .carousel { margin: 0 !important }
+    .informations { padding-right: 30px }
 }
-
-/* @media (max-width: 1440px) {
-    .container {
-        width: 100%;
-        margin: 10px;
-    }
-
-    .description {
-        padding-right: 40px
-    }
-
-    .carousel {
-        margin: 20px
-    }
-} */
+@media (max-width: 320px) {
+    .starRating { font-size: 12px }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+    .starRating { font-size: 15px }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+    .starRating { font-size: 20px }
+}
