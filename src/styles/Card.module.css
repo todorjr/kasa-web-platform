@@ -64,7 +64,7 @@
   cursor: pointer;
   color: #fff;
   z-index: 2;
-  left: 4px;
+  left: 10px;
 }
 
 .controls p:first-child {
@@ -83,7 +83,6 @@
   }
   .controls {
     width: 90%;
-    left: 11px;
     padding: 0 10px;
   }
   .controls p:last-child {
@@ -95,7 +94,6 @@
 
 }
 
-/* Styles for screens from 426px to 768px (tablets) */
 @media (min-width: 426px) and (max-width: 768px) {
   .card {
     width: 100%;
@@ -106,7 +104,6 @@
     width: 712px;
   }}
 
-/* Styles for screens from 769px to 1024px (small laptops) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .card {
     width: 400px;
@@ -114,7 +111,3 @@
   .controls { left: 45px}
 }
 
-/* Styles for screens with a minimum width of 1025px (larger laptops and desktops) */
-@media (min-width: 1025px) {
-  /* Your larger laptop/desktop styles here */
-}
