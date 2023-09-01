@@ -1,14 +1,16 @@
 import React from 'react';
-import Hero from '../components/Hero';
+import Landscape from '../components/Landscape';
 import Navbar from '../components/Navbar';
 import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
+import imgSrc from '../assets/IMG.jpg';
+
 
 function Home() {
   return (
     <>
     <Navbar />
-    <Hero />
+    <Landscape image={imgSrc} text='Chez vous, partout et ailleurs' />
     <Gallery />
     <Footer />
   </>
