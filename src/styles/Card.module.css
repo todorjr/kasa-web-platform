@@ -53,8 +53,8 @@
   border-radius: 10px;
   filter: brightness(70%)
 }
-
-.controls {
+/* .controls { display: none} */
+ .controls {
   position: absolute;
   bottom: 150px;
   padding: 0 18px;
@@ -65,7 +65,7 @@
   cursor: pointer;
   color: #fff;
   z-index: 2;
-  left: 10px;
+  left: 15px;
 }
 
 .controls p:first-child {
@@ -83,8 +83,9 @@
     margin: 40px auto 0;
   }
   .controls {
-    width: 90%;
+    width: 100%;
     padding: 0 10px;
+    left: 5px;
   }
   .controls p:last-child {
     margin-left: 0;
@@ -102,7 +103,8 @@
   }
 
   .controls {
-    width: 712px;
+    width: 95%;
+    left: 2px;
   }}
 
 @media (min-width: 769px) and (max-width: 1024px) {
