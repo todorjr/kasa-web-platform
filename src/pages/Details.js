@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../data/data.json';
 import Navbar from '../components/Navbar';
-import Collaps from '../components/Collaps';
 import Footer from '../components/Footer';
 import Error from '../pages/Error';
 import styles from '../styles/Details.module.css';
+import newCollapsStyles from '../styles/Collaps.module.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight, faStar } from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
+import NewCollaps from '../components/NewCollaps';
 
 function Details() {
     const { id } = useParams();
@@ -38,6 +40,10 @@ function Details() {
             {index < averageRating ? <FontAwesomeIcon icon={faStar} /> : <FontAwesomeIcon icon={faStarRegular} />}
         </span>
     ));
+
+    const items = ['Description','Equipments']
+    const texts = [selectedData.equipments, selectedData.description]
+
 
     return (
         <>
@@ -73,7 +79,8 @@ function Details() {
                     </div>
                 </div>
             </div>
-            <Collaps />
+            {items.map((item,index) => (
+            <NewCollaps title={item} content={item} open={item} text={texts[index]} styles={newCollapsStyles}/>))}
             <Footer />
         </>
     )

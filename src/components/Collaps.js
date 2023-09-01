@@ -9,29 +9,29 @@ function Collaps() {
     const { id } = useParams();
     const selectedData = data.find(item => item.id === id);
 
-    // State for the first dropdown
-    const [selectedDescription, setSelectedDescription] = useState(false);
 
-    // State for the second dropdown
-    const [selectedEquipments, setSelectedEquipments] = useState(false);
+    const [selectedItems, setSelectedItems] = useState([]);
 
-    const handleDescriptionClick = () => {
-        setSelectedDescription(!selectedDescription);
+    const handleItemClick = (item) => {
+        if (selectedItems.includes(item)) {
+            setSelectedItems(selectedItems.filter(selected => selected !== item));
+        } else {
+            setSelectedItems([...selectedItems, item]);
+        }
     };
 
-    const handleEquipmentsClick = () => {
-        setSelectedEquipments(!selectedEquipments);
-    };
+    const isItemSelected = (item) => selectedItems.includes(item);
+
 
     return (
         <div className={styles.container}>
             <div className={styles.dropdownContainer}>
-                <div className={styles.dropdown} onClick={handleDescriptionClick}>
+                <div className={styles.dropdown} onClick={handleItemClick('Description')}>
                 <div className={styles.titleInfo}>
                     <p className={styles.title}>Description</p>
-                    { selectedDescription ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
+                    { isItemSelected('Description') ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
-                {selectedDescription && (
+                {isItemSelected('Description') && (
                         <div className={styles.text}>
                             <span>{selectedData.description}</span>
                         </div>
@@ -39,12 +39,12 @@ function Collaps() {
                 </div>
             </div>
             <div className={styles.dropdownContainer}>
-                <div className={styles.dropdown} onClick={handleEquipmentsClick}>
+                <div className={styles.dropdown} onClick={handleItemClick('Equipments')}>
                 <div className={styles.titleInfo}>
                     <p className={styles.title}>Equipments</p>
-                    { selectedEquipments ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
+                    { isItemSelected('Equipments') ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
-                {selectedEquipments && (
+                {isItemSelected('Equipments') && (
                         <div className={styles.text}>
                             {selectedData.equipments.map(equipment => (
                                 <li className={styles.equipment} key={equipment}>{equipment}</li>
