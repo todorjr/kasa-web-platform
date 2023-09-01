@@ -7,15 +7,11 @@
   margin-left: 140px;
 }
 
-.logo img {
-  width: 150px;
-}
+.logo img { width: 150px }
 
-.links {
-  display: flex;
-}
+.links { display: flex }
 
-.link {
+a {
   color: #FF6060;
   text-decoration: none;
   margin-left: 20px;
@@ -26,7 +22,6 @@
   letter-spacing: 0em;
   text-align: right;
 }
-.active { text-decoration: underline }
 
 @media (max-width: 425px) {
   .link {
