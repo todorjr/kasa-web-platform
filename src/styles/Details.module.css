@@ -102,6 +102,7 @@
 .row{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 @media (max-width: 1024px) {
     .container {
