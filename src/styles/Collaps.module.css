@@ -1,11 +1,9 @@
 .container {
-    margin: 20px 152px 20px 160px;
-    display: flex;
-    justify-content: space-between;
+    margin: 20px;
 }
 
 .dropdown {
-    width: 582px;
+    width: 675px;
     height: auto;
     margin: 50px auto 50px;
     background-color: #FF6060;
@@ -21,34 +19,19 @@
 }
 
 .text {
-    background: #F6F6F6;
-    height: 350px;
+    background: #F6F6F6
 }
 
 .text span {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 26px;
+    line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
     color: #FF6060;
-    padding: 10px;
+    padding: 20px 20px 20px 10px;
     display: inline-block;
-}
-
-.equipment {
-    list-style: none;
-    padding: 10px;
-    color: #FF6060;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 10px;
-}
-
-.equipment:nth-child(1) {
-    margin-top: 10px
 }
 
 .titleInfo {
@@ -64,12 +47,10 @@
     color: #fff;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 425px) {
     .container {
         width: 100%;
         margin: 40px auto 0;
-        display: flex;
-        flex-direction: column;
     }
 
     .dropdown {
@@ -78,28 +59,19 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1024px) {
     .container {
-        margin-top: 0
-    }
-
-    .dropdown {
-        width: auto;
-        margin: 20px auto 30px;
-    }
-
-    .title {
-        font-size: 16px;
+        width: auto
     }
 }
 
 @media (max-width: 768px) {
+    .container {
+        width: auto
+    }
+
     .dropdown {
         width: auto;
         margin: 20px auto 30px;
     }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .container { margin: 0 }
 }

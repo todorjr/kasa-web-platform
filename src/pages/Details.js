@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../data/data.json';
 import Navbar from '../components/Navbar';
-import NewCollaps from '../components/NewCollaps';
+import Collaps from '../components/Collaps';
 import Footer from '../components/Footer';
 import Error from '../pages/Error';
 import styles from '../styles/Details.module.css';
@@ -79,7 +79,7 @@ function Details() {
             </div>
             <div className={styles.row}>
             {items.map((item,index) => (
-            <NewCollaps className="row" title={item} content={item} open={item} text={texts[index]}/>))}
+            <Collaps className="row" title={item} content={item} open={item} text={texts[index]}/>))}
             </div>
             <Footer />
         </>

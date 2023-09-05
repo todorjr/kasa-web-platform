@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Landscape from '../components/Landscape';
 import Footer from '../components/Footer';
 import bannerSrc from '../assets/banner.jpg';
-import NewCollaps from '../components/NewCollaps';
+import Collaps from '../components/Collaps';
 
 
   function About(){
@@ -17,7 +17,7 @@ import NewCollaps from '../components/NewCollaps';
         <Navbar />
         <Landscape image={bannerSrc} />
         {items.map((item, index) => (
-        <NewCollaps title={item} content={item} open={item} text={texts[index]} />))}
+        <Collaps title={item} content={item} open={item} text={texts[index]} />))}
         <Footer />
       </>
     );
