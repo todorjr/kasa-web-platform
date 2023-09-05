@@ -19,7 +19,7 @@
 }
 .card .controls {
   position: absolute;
-  bottom: 35%; 
+  bottom: 40%; 
   width: 100%;
   display: flex;
   justify-content: space-between;
