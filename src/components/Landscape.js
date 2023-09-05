@@ -6,7 +6,8 @@ function Landscape({image, text}) {
     return (
       <div className={styles.hero}>
         <img src={image} alt="logo"></img>
-        <h2 className={styles.text}>{text}</h2>
+        {text &&
+        <h2 className={styles.text}>{text}</h2> }
       </div>
     );
   }
