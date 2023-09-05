@@ -180,6 +180,11 @@
     .description { margin-top: 0 }
     .carousel { margin: 0 !important }
     .informations { padding-right: 30px }
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
 @media (max-width: 320px) {
     .starRating { font-size: 12px }

@@ -1,5 +1,4 @@
 .card {
-  padding: 10px;
   margin: 30px;
   width: 340px;
   height: 340px;
@@ -18,19 +17,23 @@
   transform: translateY(-5px);
   box-shadow: 10px 6px 12px rgba(0, 0, 0, 0.15);
 }
-.card:hover .controls {
+.card .controls {
   position: absolute;
-  bottom: 150px;
-  padding: 0 18px;
+  bottom: 35%; 
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   color: #fff;
   z-index: 2;
-  left: 15px;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
 }
+.card:hover .controls {
+  opacity: 1;
+}
+
 
 .title {
   position: absolute;
@@ -47,10 +50,8 @@
 }
 
 .image-container {
-  /* Create a container for the image to control its position */
   position: relative;
   height: 70%;
-  /* Adjust as needed */
   overflow: hidden;
   border-radius: 10px;
 }
@@ -68,32 +69,11 @@
 }
 .controls { display: none}
 
-.controls p:first-child {
-  margin-right: auto;
-}
-
-.controls p:last-child {
-  margin-left: 270px;
-}
-
-/* Styles for screens up to 425px (mobile) */
 @media (max-width: 425px) {
   .card {
     width: 100%;
     margin: 40px auto 0;
   }
-  .controls {
-    width: 100%;
-    padding: 0 10px;
-    left: 5px;
-  }
-  .controls p:last-child {
-    margin-left: 0;
-  }
-  .controls p:first-child {
-    margin-right: 0;
-  }
-
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
@@ -101,16 +81,12 @@
     width: 100%;
     margin: 40px auto 0;
   }
-
-  .controls {
-    width: 95%;
-    left: 2px;
-  }}
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .card {
-    width: 400px;
+    width: 100%;
+    margin: 40px auto 0;
   }
-  .controls { left: 45px}
 }
 

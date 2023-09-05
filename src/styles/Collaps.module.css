@@ -67,7 +67,7 @@
 
 @media (max-width: 768px) {
     .container {
-        width: auto
+        width: 100%
     }
 
     .dropdown {
