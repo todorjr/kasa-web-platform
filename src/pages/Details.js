@@ -79,7 +79,7 @@ function Details() {
             </div>
             <div className={styles.row}>
             {items.map((item,index) => (
-            <Collaps className="row" title={item} content={item} open={item} text={texts[index]}/>))}
+            <Collaps className="row" title={item} content={item} open={item} text={texts[index]} key={item}/>))}
             </div>
             <Footer />
         </>

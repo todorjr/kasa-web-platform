@@ -102,9 +102,15 @@
 .row{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
-@media (max-width: 1024px) {
+.column {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+@media (min-width: 1024px) {
     .container {
         flex-direction: row;
         width: 100%;
@@ -129,6 +135,11 @@
         flex-direction: row;
         gap: 5px;
         padding-left: 0;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
     }
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -174,6 +185,19 @@
         width: 100%;
         align-items: center;
     }
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+@media (min-width: 769px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+}
 }
 
 @media (max-width: 425px) {

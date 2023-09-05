@@ -24,10 +24,18 @@ function NewCollaps({text, content, open, title}) {
                 { isItemSelected(content) ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
                 {isItemSelected(content) && (
-                    <div className={styles.text}>
-                        <span>{text}</span>
+                    <div className={styles.textContainer}>
+                        {Array.isArray(text) ? (
+                        <ul className={styles.textList}>
+                            {text.map((item, index) => (
+                            <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                        ) : (
+                        <p className={styles.textSpan}>{text}</p>
+                        )}
                     </div>
-                )}
+                    )}
             </div>
     </div>
     )

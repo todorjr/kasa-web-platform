@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import bannerSrc from '../assets/banner.jpg';
 import Collaps from '../components/Collaps';
 
-
   function About(){
     const items = ['Fiabilité','Respect','Service','Sécurité']
 

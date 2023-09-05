@@ -4,7 +4,7 @@
   align-items: center;
   padding: 10px 20px;
   width: 1400px;
-  margin-left: 120px;
+  margin-left: 155px;
 }
 
 .logo img { width: 150px }
@@ -23,13 +23,24 @@ a {
   text-align: right;
 }
 
-@media (max-width: 425px) {
-  .link {
-    font-size: 16px !important;
+@media (min-width: 320px) {
+  .navbar {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
   }
+  .logo img {
+    width: 100px;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+  }
+  .logo a { margin: 0}
+  a { font-size: 18px }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .navbar {
     width: 100%;
     padding: 5px;
@@ -42,7 +53,7 @@ a {
 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .link {
     font-size: 20px;
     line-height: 30px;
@@ -63,11 +74,5 @@ a {
 
   .link {
     margin: 5px 0;
-  }
-}
-
-@media (max-width: 1440px) {
-  .navbar {
-    margin-left: 0;
   }
 }
