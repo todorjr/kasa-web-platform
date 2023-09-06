@@ -3,9 +3,9 @@ import styles from "../styles/Collaps.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-function NewCollaps({text, content, open, title}) {
+function NewCollaps({ text, content, open, title }) {
     const [selectedItems, setSelectedItems] = useState([]);
-    
+
     const handleItemClick = (item) => {
         if (selectedItems.includes(item)) {
             setSelectedItems(selectedItems.filter(selected => selected !== item));
@@ -20,24 +20,24 @@ function NewCollaps({text, content, open, title}) {
         <div className={styles.container}>
             <div className={styles.dropdown} onClick={() => handleItemClick(open)}>
                 <div className={styles.titleInfo}>
-                <p className={styles.title}>{title}</p>
-                { isItemSelected(content) ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
+                    <p className={styles.title}>{title}</p>
+                    {isItemSelected(content) ? <FontAwesomeIcon icon={faChevronUp} className={styles.icon} /> : <FontAwesomeIcon icon={faChevronDown} className={styles.icon} />}{' '}
                 </div>
                 {isItemSelected(content) && (
                     <div className={styles.textContainer}>
                         {Array.isArray(text) ? (
-                        <ul className={styles.textList}>
-                            {text.map((item, index) => (
-                            <li key={index}>{item}</li>
-                            ))}
-                        </ul>
+                            <ul className={styles.textList}>
+                                {text.map((item, index) => (
+                                    <li key={index}>{item}</li>
+                                ))}
+                            </ul>
                         ) : (
-                        <p className={styles.textSpan}>{text}</p>
+                            <p className={styles.textSpan}>{text}</p>
                         )}
                     </div>
-                    )}
+                )}
             </div>
-    </div>
+        </div>
     )
 }
 

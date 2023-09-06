@@ -14,7 +14,7 @@ function Details() {
     const { id } = useParams();
     const [currentIndex, setCurrentIndex] = useState(0); //currentIndex of the picture setCurrentIndex is a function to update currentIndex
 
-    const validIds = data.map(item => item.id);    
+    const validIds = data.map(item => item.id);
     if (!validIds.includes(id)) {
         return (
             <>
@@ -39,7 +39,7 @@ function Details() {
         </span>
     ));
 
-    const items = ['Description','Equipments']
+    const items = ['Description', 'Equipments']
     const texts = [selectedData.equipments, selectedData.description]
 
 
@@ -78,8 +78,8 @@ function Details() {
                 </div>
             </div>
             <div className={styles.row}>
-            {items.map((item,index) => (
-            <Collaps className="row" title={item} content={item} open={item} text={texts[index]} key={item}/>))}
+                {items.map((item, index) => (
+                    <Collaps className="row" title={item} content={item} open={item} text={texts[index]} key={item} />))}
             </div>
             <Footer />
         </>

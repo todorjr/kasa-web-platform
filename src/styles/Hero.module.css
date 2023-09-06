@@ -9,7 +9,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    filter : brightness(70%)
+    filter: brightness(70%)
 }
 
 .hero .text {
@@ -59,6 +59,7 @@
         left: 575px;
     }
 }
+
 @media (min-width: 1025px) and (max-width: 1440px) {
     .hero {
         width: 100%;
