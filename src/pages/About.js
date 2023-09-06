@@ -16,7 +16,7 @@ import Collaps from '../components/Collaps';
         <Navbar />
         <Landscape image={bannerSrc} />
         {items.map((item, index) => (
-        <Collaps title={item} content={item} open={item} text={texts[index]} />))}
+        <Collaps title={item} content={item} open={item} text={texts[index]} key={item}/>))}
         <Footer />
       </>
     );
